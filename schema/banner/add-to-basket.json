@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/banner/add-to-bag/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+  "properties": {
+    "appliedScience": {
+      "type": "string",
+      "description": "Description: Identifies science applied to results - Priority: TBD"
+    },
+    "basketID": {
+      "description": "Description: Captures the first 20 characters of the bagID, concatenated, no dashes - Priority: TBD",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]{20}$"
+    },
+    "componentName": {
+      "description": "Description: Identifies which component is being interacted with - Priority: TBD",
+      "type": "string"
+    },
+    // Have to include product object but we can automate this I think, if we have rules for certain scenarios like add-to-cart
+    "product": {
+      "$ref": "/shared/fieldgroups/product/$VERSION"
+    },
+    "search": {
+      "$id": "/banner/add-to-cart/search",
+      "description": "Captures search data related to an add to cart event",
+      "properties": {
+      },
+      "allOf": [
+        {
+          "$ref": "/banner/fieldgroups/search/$VERSION"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "/shared/classes/add-to-cart-no-product/$VERSION"
+    }
+  ]
+}

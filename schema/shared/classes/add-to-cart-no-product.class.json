@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/shared/classes/add-to-cart-no-product/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+  "type": "object",
+  "description": "When a product is successfully added to cart",
+  "properties": {
+    "scenarioName": {
+      "description": "Description: Upon successful add to cart or a successful increase in quantity of an item already in cart.",
+      "type": "string",
+      "const": "add-to-cart"
+    },
+    "componentName": {
+      "description": "Identifies which component is being interacted with",
+      "type": "string"
+    },
+    "schemaVersion": {
+      "description": "The schema version currently being used.",
+      "type": "string",
+			"const": "$VERSION"
+    }
+  },
+  "required": [
+    "scenarioName",
+    "eventType",
+    "componentName",
+    "schemaVersion"
+  ],
+  "allOf": [
+    {
+      "$ref": "/shared/fieldgroups/base-pi-data/$VERSION"
+    }
+  ]
+}

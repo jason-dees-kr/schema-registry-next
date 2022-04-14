@@ -1,0 +1,32 @@
+{
+	"$id": "/banner/fieldgroups/search/$VERSION",
+	"description": "Captures search data related to an add to cart event",
+	"properties": {
+		"productSearchID": {
+			"type": "string",
+			"description": "Description: Captures product search ID as defined by search services team - Priority: TBD"
+		},
+		"predictiveChoice": {
+			"description": "Captures choice selected in predictive search",
+			"type": "string"
+		},
+		"predictiveOption": {
+			"enum": [
+				"autocomplete",
+				"historical",
+				"related tag",
+				"trending",
+				"whats next",
+				"whats next carrousel",
+				"partials"
+			],
+			"description": "Captures grouping of predictive choices",
+			"type": "string"
+		}
+	},
+	"allOf": [
+		{
+			"$ref": "/shared/fieldgroups/search/$VERSION"
+		}
+	]
+}

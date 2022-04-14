@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/vitacost/add-to-cart/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+  "properties": {
+    "eventType": {
+      "description": "Event type, what caused the event to happen.",
+      "type": "string",
+      "enum": [
+        "page",
+        "link"
+      ]
+    }
+    // Cannot modify product object here.
+	},
+  "allOf": [
+    {
+      "$ref": "/shared/classes/add-to-cart/$VERSION"
+    }
+  ]
+}
