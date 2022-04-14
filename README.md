@@ -4,6 +4,8 @@ This has been based on [Adobe's XDM schema organization](https://github.com/adob
 
 We all agree on having the concept of `shared` schemas, in this example stored at `schema/shared`. Inside that directory we have abstract schema definitions, meaning these definitions cannot be used directly. Data producers would create a new scenario based on one of these classes, in this example `add-to-cart`.
 
+Another goal is to organize, and categorize, schema in such a way as to help users understand what a certain analytics definition is supposed to be used for. We can use this as an educational tool as much as a capability tool.
+
 ## [Organization](/Organization.md)
 
 ## [Inheritance](/Inheritance.md)

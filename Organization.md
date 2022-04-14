@@ -14,7 +14,7 @@
 	add-to-cart.json
 ```
 
-In the above structure, all data producer schema libraries will have access to the `shared` directory. Any schema that inherits from anything in the shared directory (will always use latest | have the option to use any existing version of the schema). This depends on if we want to force update or let people update as they wish.
+In the above structure, all data producer schema libraries will have access to the `shared` directory. The `shared` directory contains only abstract schema. Any schema that inherits from anything in the shared directory (will always use latest | have the option to use any existing version of the schema). This depends on if we want to force update or let people update as they wish.
 
 ## Classes
 
