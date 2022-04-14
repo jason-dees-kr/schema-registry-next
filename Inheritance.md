@@ -10,6 +10,10 @@ This enables our models to be more strict in what we allow without the complicat
 
 If we allow data producers to create custom classes, we can enable this property sharing among all their scenarios that would inherit from their own custom class.
 
+## Versioning
+
+Class and field group definitions will have their own version that will potentially be different than any schema definition that inherits (implements?) them. 
+
 ## Issues With Child References
 
 Ideally an `add-to-cart` class would contain `product` information already. If we include the `product` field group reference directly in the `add-to-cart` class, data producers would not able to modify the `product` field group at all. The `schema/shared/classes/add-to-cart.class.json` file has the `product` field group included and `schema/vitacost/add-to-cart.json` inherits from that class definition. Vitacost can no longer edit the `product` field group to meet their product-specific needs.

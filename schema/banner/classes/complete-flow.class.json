@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/banner/classes/complete-flow/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+	"description": "Data around the flow that was just completed by a user",
+  "properties": {
+    "guestFlow": {
+      "description": "Description: Whether user is in guest flow true, if not false  - Priority: TBD",
+      "type": "boolean"
+    },
+		"pageName": {
+      "description": "Description: Captures page name user action occurred - Priority: TBD",
+      "type": "string"
+    }
+  },
+	"required": [
+		"guestFlow",
+		"pageName"
+	],
+  "allOf": [
+    {
+      "$ref": "/shared/classes/complete-flow/$VERSION"
+    }
+  ]
+}

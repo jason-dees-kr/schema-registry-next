@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/banner/complete-flow-cashback/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+  "properties": {
+    "paypalAvailable": {
+      "description": "Total amount available for PayPal flow - Priority: TBD",
+      "type": "number"
+    },
+    "cashOutAvailable": {
+      "description": "Total amount available for shopper card flow - Priority: TBD",
+      "type": "number"
+    },
+    "cashOutAmount": {
+      "description": "Total amount a user cashed out from either payPal or shopper card flow - Priority: TBD",
+      "type": "number"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "/banner/classes/complete-flow/$VERSION"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/banner/complete-flow-cashback/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+  "properties": {
+    "initalizedPumpNumber": {
+      "description": "Description: Pump number displayed at screen load - Priority: TBD",
+      "type": "number"
+    },
+    "authorizedPumpNumber": {
+      "description": "Description: Ump number authorized - Priority: TBD",
+      "type": "number"
+    },
+    "defaultDiscountPerGallon": {
+      "description": "Description: Preselected discount per gallon - Priority: TBD",
+      "type": "number"
+    },
+    "minDiscountPerGallon": {
+      "description": "Description: Minimum user selectable discount per gallon - Priority: TBD",
+      "type": "number"
+    },
+    "maxDiscountPerGallon": {
+      "description": "Description: Maximum user selectable discount per gallon - Priority: TBD",
+      "type": "number"
+    },
+    "authorizedDiscPerGallon": {
+      "description": "Description: Authorized discount per gallon - Priority: TBD",
+      "type": "number"
+    },
+    "defaultFuelAmount": {
+      "description": "Description: Preselected fuel amount - Priority: TBD",
+      "type": "string"
+    },
+    "authorizedFuelAmount": {
+      "description": "Description: Authorized fuel - Priority: TBD",
+      "type": "string"
+    },
+    "pumpSelectMethod": {
+      "description": "Description: Pump select method - Priority: TBD",
+      "type": "string",
+      "enum": [
+        "nfc",
+        "manual"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "/banner/classes/complete-flow/$VERSION"
+    }
+  ]
+}

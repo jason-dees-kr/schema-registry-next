@@ -16,7 +16,6 @@
       "type": "string",
       "pattern": "^[A-Za-z0-9]{20}$"
     },
-    // Have to include product object but we can automate this I think, if we have rules for certain scenarios like add-to-cart
     "product": {
       "$ref": "/shared/fieldgroups/product/$VERSION"
     },

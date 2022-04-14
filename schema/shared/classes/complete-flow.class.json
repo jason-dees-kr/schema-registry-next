@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/shared/classes/complete-flow/$VERSION",
+  "description": "When a flow is successfully completed",
+  "type": "object",
+  "clickstreamValidationLevel": "warnings",
+  "properties": {
+    "componentName": {
+      "description": "Description: Identifies which component is being interacted with - Priority: TBD",
+      "type": "string"
+    },
+    "usageContext": {
+      "description": "Description: Captures scenario name without delimiter - Priority: TBD",
+      "const": "complete flow",
+      "type": "string"
+    },
+    "flowStepDescription": {
+      "description": "Description: To capture flow step description - Priority: TBD",
+      "type": "string"
+    },
+    "scenarioName": {
+      "description": "Description: Captures which user action is being tracked - Priority: TBD",
+      "const": "complete-flow",
+      "type": "string"
+    }
+	},
+	"required": [
+		"componentName",
+		"usageContext",
+		"flowStepDescription",
+		"scenarioName"
+	]
+}
