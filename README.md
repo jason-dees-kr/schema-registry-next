@@ -9,3 +9,5 @@ Another goal is to organize, and categorize, schema in such a way as to help use
 ## [Organization](/Organization.md)
 
 ## [Inheritance](/Inheritance.md)
+
+## [New Fields](/NewFields.md)
