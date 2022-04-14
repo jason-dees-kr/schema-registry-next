@@ -29,5 +29,10 @@
 		"usageContext",
 		"flowStepDescription",
 		"scenarioName"
-	]
+	],
+  "allOf": [
+    {
+      "$ref": "/shared/fieldgroups/data-classification/$VERSION"
+    }
+  ]
 }

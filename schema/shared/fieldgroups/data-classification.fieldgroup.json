@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "/shared/fieldgorups/base-pi-data/$VERSION",
+  "clickstreamValidationLevel": "warnings",
+  "description": "Description: To capture PHI information for scenarios \n Visit https://confluence.kroger.com/confluence/pages/viewpage.action?pageId=195689822 for more info",
+  "type": "object",
+  "properties": {
+    "dataClassification": {
+      "type": "string",
+      "description": "Description: To capture PHI data classification of a scenario - Priority: Tier A",
+      "enum": [
+        "Highly Private Embedded Personal Information",
+        "Highly Private Linked Personal Information",
+        "Protected Health Information",
+        "Anonymized Personal Information"
+      ]
+    }
+  }
+}

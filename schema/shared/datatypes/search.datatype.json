@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "/shared/fieldgroups/search/$VERSION",
+  "$id": "/shared/datatypes/search/$VERSION",
   "clickstreamValidationLevel": "warnings",
   "type": "object",
   "description": "Description: Groups attributes related to search - Priority: TBD",

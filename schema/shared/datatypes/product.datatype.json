@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "/shared/fieldgroups/product/$VERSION",
+  "$id": "/shared/datatypes/product/$VERSION",
   "clickstreamValidationLevel": "warnings",
 	"description": "Array of products",
 	"type": "array",

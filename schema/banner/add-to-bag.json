@@ -16,7 +16,6 @@
       "description": "Description: Identifies which component is being interacted with - Priority: TBD",
       "type": "string"
     },
-    // Have to include product object but we can automate this I think, if we have rules for certain scenarios like add-to-cart
     "product": {
       "$ref": "/shared/fieldgroups/product/$VERSION"
     },
@@ -27,7 +26,7 @@
       },
       "allOf": [
         {
-          "$ref": "/banner/fieldgroups/search/$VERSION"
+          "$ref": "/banner/datatypes/search/$VERSION"
         }
       ]
     }

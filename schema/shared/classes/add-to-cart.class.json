@@ -15,12 +15,12 @@
       "type": "string"
     },
     "product": {
-			"$ref": "/shared/fieldgroups/product/$VERSION" //It'd be impossible to modify this, like add fields as a consumer
-		},
+      "$ref": "/shared/datatypes/product/$VERSION"
+    },
     "schemaVersion": {
       "description": "The schema version currently being used.",
       "type": "string",
-			"const": "$VERSION"
+      "const": "$VERSION"
     }
   },
   "required": [
@@ -31,7 +31,7 @@
   ],
   "allOf": [
     {
-      "$ref": "/shared/fieldgroups/base-pi-data/$VERSION"
+      "$ref": "/shared/fieldgroups/data-classification/$VERSION"
     }
   ]
 }

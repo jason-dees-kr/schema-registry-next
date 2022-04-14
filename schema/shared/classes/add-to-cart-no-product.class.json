@@ -28,7 +28,7 @@
   ],
   "allOf": [
     {
-      "$ref": "/shared/fieldgroups/base-pi-data/$VERSION"
+      "$ref": "/shared/fieldgroups/data-classification/$VERSION"
     }
   ]
 }
