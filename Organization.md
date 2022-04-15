@@ -31,6 +31,7 @@ The schema in `/shared/classes` will be our base scenario definitions, essential
 
 To make it more obvious you are editing a class instead of a scenario, I have added the `*.class.json` suffix to each of these files.
 
+Classes can also exist inside schema libraries and they will still be abstract.
 
 ## Data Types
 
@@ -38,11 +39,11 @@ The schema in `/shared/datatypes` are similar to the ones in `/shared/classes` b
 
 To make it more obvious you are editing a class instead of a scenario, I have added the `*.fieldgroup.json` suffix to each of these files.
 
-Data types are more flexible in how we handle them, but they should still be treated as abstract definitions, unable to instantiated without first inheriting from them. Using this pattern we set up data producers with the ability to modify their data type implementation from the start.
+Data types are more flexible in how we handle them. Using this pattern we set up data producers with the ability to modify their data type implementation from the start.
 
 ## Field Groups
 
-Field groups are fields that can be applied consistently across multiple schema, such as data classification, or delivery service information.
+Field groups are fields that can be applied consistently across multiple schema, such as data classification, or delivery service information. These are also abstract schema and should be treated as such, even field groups inside a schema library. 
 
 ## Custom Classes, Data Types, and Field Groups
 

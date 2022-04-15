@@ -12,7 +12,7 @@ Adapted from Adobe's idea of [composition](https://experienceleague.adobe.com/do
 
 ## Data Producer
 
-The people, teams, or organizations that use scenarios to produce data for reporting purposes.
+The people, teams, or organizations that use scenarios to produce data for reporting purposes. They generate data that conforms to the scenario definitions in their schema library.
 
 ## Data Type
 
