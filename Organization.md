@@ -4,8 +4,10 @@
 /shared
 	/classes
 		add-to-cart.class.json
+		complete-flow.class.json
 	/datatypes
 		product.datatype.json
+		search.datatype.json
 	/fieldgroups
 		data-classification.fieldgroup.json
 /banner
@@ -13,6 +15,7 @@
 		complete-flow.class.json
 	/datatypes
 		product.datatype.json
+		search.datatype.json
 	/fieldgroups
 		fuel-information.fieldgroup.json
 	add-to-cart.json
