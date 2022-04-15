@@ -6,11 +6,15 @@
 		add-to-cart.class.json
 	/datatypes
 		product.datatype.json
+	/fieldgroups
+		data-classification.fieldgroup.json
 /banner
 	/classes
 		complete-flow.class.json
 	/datatypes
 		product.datatype.json
+	/fieldgroups
+		fuel-information.fieldgroup.json
 	add-to-cart.json
 	complete-flow-cashback.json
 	complete-flow-fuel.json
