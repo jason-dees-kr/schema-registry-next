@@ -1,7 +1,7 @@
 
 Allow creation of an ERD of some sort?
-Can we steal the idea of 'classes' and 'field groups'?
-https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en
+Can we steal the idea of 'classes', 'field groups', and 'data types'?
+[Composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en)
 
 ## Class
 
@@ -15,25 +15,31 @@ Field groups define which class(es) they are compatible with based on the behavi
 
 Remember that schemas are composed of “zero or more” field groups, so this means that you could compose a valid schema without using any field groups at all.
 
-Probably disallow the creation of custom objects, ie force teams to add new fields on the top level of the predefined class/field group. (https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#objects-v-freeform)
+## Data type
 
-Adobe differentiates between Events and Profiles and Lookup entities
-https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/best-practices.html?lang=en
+Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a field group, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a field group because a data type can be included anywhere in a schema by adding it as the “data type” of a field.
 
-Stealing the UI for some concepts
-https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en
+Experience Platform provides a number of common data types as part of the Schema Registry to support the use of standard patterns for describing common data structures. This is explained in more detail in the Schema Registry tutorials, where it will become clearer as you walk through the steps to define data types.
 
-We should start thinking about identity and an identity service of some sort
-https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en
+The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the Demographic Details field group uses the “Person name” data type, as indicated by the text following the pipe character (|) next to the field’s name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person’s name needs to be captured.
 
-How do we track performance degradation? What causes that?
-https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en
+[Probably disallow the creation of custom objects, ie force teams to add new fields on the top level of the predefined class/field group.](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#objects-v-freeform)
 
-https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#data-behaviors
+[Adobe differentiates between Events and Profiles and Lookup entities](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/best-practices.html?lang=en)
+
+
+[Stealing the UI for some concepts](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en)
+
+[We should start thinking about identity and an identity service of some sort](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en)
+
+[How do we track performance degradation when reporting on data? What causes that?](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en)
+
+[Data Behaviors](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en#data-behaviors)
 It seems we really focus on events, with events having the associated profile information in them. I think adobe terms this as 'time-series'. We tend to have 'record' and 'ad-hoc' data with the 'time-series' data. I'm not sure this is important or relevant to us.
 
-https://github.com/adobe/xdm/tree/master/components/fieldgroups
-Field groups are also limited to certain classes. 
+[Field groups are also limited to certain classes.](https://github.com/adobe/xdm/tree/master/components/fieldgroups)
+
+# [Data modeling best practices](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/best-practices.html?lang=en#sort-entities-into-profile%2C-lookup%2C-and-event-categories)
 
 ## Profile entities	
 
@@ -49,4 +55,4 @@ Kroger wants to limit the amount of custom classes in use.
 
 Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the XDM ExperienceEvent class.
 
-https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/best-practices.html?lang=en#sort-entities-into-profile%2C-lookup%2C-and-event-categories
+Should we split out profile information into separate schema? What advantages or disadvantages does that have over what we do now?
