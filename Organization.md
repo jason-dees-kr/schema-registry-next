@@ -45,10 +45,10 @@ Data types are more flexible in how we handle them. Using this pattern we set up
 
 Field groups are fields that can be applied consistently across multiple schema, such as data classification, or delivery service information. These are also abstract schema and should be treated as such, even field groups inside a schema library. 
 
+Adobe also limits field groups to schema that implement specific classes.
+
 ## Custom Classes, Data Types, and Field Groups
 
 We also have the possibility of allowing data producers to create their own custom, reusable classes, data types, and field groups that are not accessible to other schema libraries. These would still inherit from the shared definitions, but allow data producers to consistently customize them across their library. These are stored in the `/banner/classes/`, `/banner/datatypes/`, and `/banner/fieldgroups/` directories.
 
-The custom classes, data types, and field groups have a similar naming scheme to the shared ones. They still cannot be scenarios by themselves, but can be added as fields or objects to scenarios.
-
-## Limiting Field Groups
+The custom classes, data types, and field groups have a similar naming scheme to the shared ones. The classes and field groups are still abstract; data types can be use inside scenarios, field groups, or other data types.
