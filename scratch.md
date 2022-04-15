@@ -1,7 +1,8 @@
 
 Allow creation of an ERD of some sort?
 Can we steal the idea of 'classes', 'field groups', and 'data types'?
-[Composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en)
+
+# [Composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en)
 
 ## Class
 
@@ -56,3 +57,11 @@ Kroger wants to limit the amount of custom classes in use.
 Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the XDM ExperienceEvent class.
 
 Should we split out profile information into separate schema? What advantages or disadvantages does that have over what we do now?
+
+# [ERD](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/best-practices.html?lang=en#create-a-high-level-erd)
+
+Would making an ERD be valuable?
+
+Can we leverage an ERD as a requirements form in some way?
+
+Ask for things like what they want to measure, data they want to capture, how it relates to their existing entities/models/objects?
