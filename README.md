@@ -8,8 +8,10 @@ We all agree on having the concept of `shared` schemas, in this example stored a
 
 Another goal is to organize, and categorize, schema in such a way as to help users understand what a certain analytics definition is supposed to be used for. We can use this as an educational tool as much as a capability tool.
 
-## [Organization](/Organization.md)
+## [Glossary (WIP)](/Glossary.md)
 
 ## [Inheritance](/Inheritance.md)
 
 ## [New Fields](/NewFields.md)
+
+## [Organization](/Organization.md)
