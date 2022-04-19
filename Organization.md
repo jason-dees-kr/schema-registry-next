@@ -3,25 +3,37 @@
 ```
 /shared
 	/classes
-		add-to-cart.class.json
-		complete-flow.class.json
+		/add-to-cart
+			add-to-cart.class.json
+		/complete-flow
+			complete-flow.class.json
 	/datatypes
-		product.datatype.json
-		search.datatype.json
+		/product
+			product.datatype.json
+		/search 
+			search.datatype.json
 	/fieldgroups
-		data-classification.fieldgroup.json
+		/data-classification
+			data-classification.fieldgroup.json
 /banner
 	/classes
-		complete-flow.class.json
+		/complete-flow
+			complete-flow.class.json
 	/datatypes
-		product.datatype.json
-		search.datatype.json
+		/product
+			product.datatype.json
+		/search
+			search.datatype.json
 	/fieldgroups
-		fuel-information.fieldgroup.json
+		/fuel-information
+			fuel-information.fieldgroup.json
 	/scenarios
-		add-to-cart.json
-		complete-flow-cashback.json
-		complete-flow-fuel.json
+		/add-to-cart
+			add-to-cart.json
+		/complete-flow-cashback
+			complete-flow-cashback.json
+		/complete-flow-fuel
+			complete-flow-fuel.json
 ```
 
 In the above structure, all data producer schema libraries will have access to the `shared` directory. The `shared` directory contains only abstract schema. Any schema that inherits from anything in the shared directory (will always use latest | have the option to use any existing version of the schema). This depends on if we want to force update or let people update as they wish.
