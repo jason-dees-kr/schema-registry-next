@@ -1,5 +1,7 @@
 # Organization
 
+## Versionless directory structure
+
 ```
 /shared
 	/classes
@@ -36,7 +38,7 @@
 			complete-flow-fuel.json
 ```
 
-In the above structure, all data producer schema libraries will have access to the `shared` directory. The `shared` directory contains only abstract schema. Any schema that inherits from anything in the shared directory (will always use latest | have the option to use any existing version of the schema). This depends on if we want to force update or let people update as they wish.
+In the above versionless structure, all data producer schema libraries will have access to the `shared` directory. The `shared` directory contains only abstract schema. Any schema that inherits from anything in the shared directory (will always use latest | have the option to use any existing version of the schema). This depends on if we want to force update or let people update as they wish.
 
 ## Classes
 
@@ -65,3 +67,96 @@ Adobe also limits field groups to schema that implement specific classes.
 We also have the possibility of allowing data producers to create their own custom, reusable classes, data types, and field groups that are not accessible to other schema libraries. These would still inherit from the shared definitions, but allow data producers to consistently customize them across their library. These are stored in the `/banner/classes/`, `/banner/datatypes/`, and `/banner/fieldgroups/` directories.
 
 The custom classes, data types, and field groups have a similar naming scheme to the shared ones. The classes and field groups are still abstract; data types can be use inside scenarios, field groups, or other data types.
+
+
+## Versioned
+
+```
+/dist
+	/shared
+		/classes
+			/add-to-cart
+				/1.0.0
+					add-to-cart.class.json
+				/latest
+					add-to-cart.class.json
+				CHANGELOG.md
+			/complete-flow
+				/1.0.0
+					complete-flow.class.json
+				/latest
+					complete-flow.class.json
+				CHANGELOG.md
+		/datatypes
+			/product
+				/1.0.0
+					product.datatype.json
+				/latest
+					product.datatype.json
+				CHANGELOG.md
+			/search 
+				/1.0.0
+					search.datatype.json
+				/latest
+					search.datatype.json
+				CHANGELOG.md
+		/fieldgroups
+			/data-classification
+				/1.0.0
+					data-classification.fieldgroup.json
+				/latest
+					data-classification.fieldgroup.json
+				CHANGELOG.md
+	/banner
+		/classes
+			/complete-flow
+				/1.0.0
+					complete-flow.class.json
+				/latest
+					complete-flow.class.json
+				CHANGELOG.md
+		/datatypes
+			/product
+				/1.0.0
+					product.datatype.json
+				/latest
+					product.datatype.json
+				CHANGELOG.md
+			/search
+				/1.0.0
+					search.datatype.json
+				/latest
+					search.datatype.json
+				CHANGELOG.md
+		/fieldgroups
+			/fuel-information
+				/1.0.0
+					fuel-information.fieldgroup.json
+				/latest
+					fuel-information.fieldgroup.json
+				CHANGELOG.md
+		/scenarios
+			/add-to-cart
+				/1.0.0
+					add-to-cart.json
+				/latest
+					add-to-cart.json
+				CHANGELOG.md
+			/complete-flow-cashback
+				/1.0.0
+					complete-flow-cashback.json
+				/latest
+					complete-flow-cashback.json
+				CHANGELOG.md
+			/complete-flow-fuel
+				/1.0.0
+					complete-flow-fuel.json
+				/latest
+					complete-flow-fuel.json
+				CHANGELOG.md
+```
+
+We might be able to come up with a better versioning scheme and take advantage of git tags and releases? It would be easier to have a `dist` directory like this for Scenario Poet so we can easily grab all previous versions. 
+
+* How can we construct a versioning system like this for Scenario Poet without having a dist folder? From github releases somehow?
+* To reduce complexity does it make sense to have 1 github schema registry repo per schema library? ie one repo for Banner, one repo for Demeter, one repo for VitaCost? How do we do the shared schemas at that point? One shared repo that can be referenced by the others?
